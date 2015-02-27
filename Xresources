@@ -1,0 +1,9 @@
+URxvt.background: black
+URxvt.foreground: white
+URxvt.scrollBar: false
+URxvt*.transparent: true
+URxvt*.shading: 35
+URxvt*urlLauncher: /usr/bin/firefox
+URxvt*blurRadius: 5
+URxvt*fading: 30
+URxvt.font: xft:Inconsolata-Regular:regular:size=10

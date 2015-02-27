@@ -1,0 +1,12 @@
+#!/bin/bash
+
+ln -s bspwmrc ~/.config/bspwm/bspwmrc 
+ln -s sxhkdrc ~/.config/sxhkd/sxhkdrc
+ln -s ghci ~/.ghci
+ln -s tmux.conf ~/.tmux.conf
+ln -s vimperatorrc ~/.vimperatorrc
+ln -s vimrc ~/.vimrc
+ln -s Xresources ~/.Xresources
+ln -s zshrc ~/.zshrc
+ln -s xinitrc ~/.xinitrc
+ln -s touchpad.sh ~/.scripts/touchpad.sh
