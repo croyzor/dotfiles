@@ -11,6 +11,7 @@ Relevant files:
 * `tmux.conf`
 * `battery.sh`
 * `net.sh`
+
 The only real difference being that my `net.sh` file uses `netctl list` rather than `iwgetid`
 
 ### bspwm
