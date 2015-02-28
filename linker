@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [ ! -d ~/.scripts ]; then
+	mkdir ~/.scripts
+fi
+
 ln -s bspwmrc ~/.config/bspwm/bspwmrc 
 ln -s sxhkdrc ~/.config/sxhkd/sxhkdrc
 ln -s ghci ~/.ghci
@@ -9,4 +13,7 @@ ln -s vimrc ~/.vimrc
 ln -s Xresources ~/.Xresources
 ln -s zshrc ~/.zshrc
 ln -s xinitrc ~/.xinitrc
-ln -s touchpad.sh ~/.scripts/touchpad.sh
+
+ln -s scripts/touchpad.sh ~/.scripts/touchpad.sh
+ln -s scripts/battery.sh ~/.scripts/battery.sh
+ln -s scripts/net.sh ~/.scripts/net.sh
