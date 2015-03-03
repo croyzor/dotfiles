@@ -14,7 +14,7 @@ super + w
 super + t
 	bspc desktop -l next
 
-# No idea
+# Balances desktop so that all windows take up the same space
 super + b
 	bspc desktop -B
 
@@ -36,10 +36,6 @@ super + {o,i}
 	bspc window {older,newer} -f; \
 	bspc control --record-history on
 
-# No idea
-super + y
-	bspc window -w last.manual
-
 # Switch to the biggest window in desktop
 super + m
 	bspc window -s biggest
@@ -60,11 +56,11 @@ super + {comma,period}
 super + bracket{left,right}
 	bspc desktop -f {prev,next}
 
-# No idea
+# Preselect wondow for splitting
 super + ctrl + {h,j,k,l}
 	bspc window -p {left,down,up,right}
 
-# No idea - does something funky with urxvt
+# Cancel manual split on window/desktop level
 super + ctrl + {_,shift + }space
 	bspc {window -p cancel,desktop -c}
 
@@ -76,7 +72,7 @@ super + alt + {h,j,k,l}
 super + alt + shift + {h,j,k,l}
 	bspc window -e {right -10,up +10,down -10,left +10}
 
-# No idea
+# Set splitting ratio
 super + ctrl + {1-9}
 	bspc window -r 0.{1-9}
 
