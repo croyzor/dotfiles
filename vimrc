@@ -40,6 +40,7 @@ set shiftwidth=4
 let g:slime_target = "tmux"
 let g:slime_paste_file = "/tmp/.slime_paste"
 let g:tagbar_autofocus = 1
+let g:solarized_termcolors=256
 
 au FileType haskell nnoremap <buffer> <leader>1 :HdevtoolsType<CR>
 au FileType haskell nnoremap <buffer> <silent> <leader>2 :HdevtoolsClear<CR>
