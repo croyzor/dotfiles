@@ -1,0 +1,104 @@
+<html>
+<head>
+	<title>start</title>
+	<link rel="shortcut icon" type="image/gif" href="<!--INSERT IMG URL HERE>-->" />
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+body {
+	background : #ffffff;
+}
+			.keepcentered {
+				position : absolute;
+				left : 50%;
+				top : 50%;
+				width : 600px;
+				margin-left : -240px;
+				margin-top : -150px;
+				font-weight : 100;
+			}
+			body {
+				font-family: 'Roboto', sans-serif;
+					font-style : normal;
+					color : #d64937; // Change this to change the color of the colored font on the page.
+					margin : 5px;
+			}
+			td, tr {
+				width: 20%;
+				text-align: center;
+			}
+			a {
+				font-weight: 100;
+					color : #999;
+			}
+			a:hover{
+				color: #eee;
+			}
+			a:link {
+				text-decoration : none;
+			text-shadow: 0px 0px 0px #000;
+			}
+	</style>
+</head>
+
+<body onload="updateClock()">
+	<div class="keepcentered">
+		<center><font size=96><div id="time"></div></font></center>
+		<p><center>
+			<table width="100%" border="0px">
+				<tr>
+					<td>Time wasting</td>
+					<td>Haskell</td>
+					<td>Uni</td>
+					<td>Comics</td>
+				</tr>
+				<tr>
+					<td><a href="http://reddit.com">Reddit</a></td>
+					<td><a href="http://book.realworldhaskell.org/read/">Real World</a></td>
+					<td><a href="http://classes.myplace.strath.ac.uk">MyPlace</a></td>
+					<td><a href="http://smbc-comics.com">smbc</a></td>
+				</tr>
+				<tr>
+					<td><a href="http://tumblr.com">Tumblebums</a></td>
+					<td><a href="http://learnyouahaskell.com/chapters">Learn You</a></td>
+					<td><a href="http://suprimo.lib.strath.ac.uk">Suprimo</a></td>
+					<td><a href="http://xkcd.com">xkcd</a></td>
+				</tr>
+				<tr>
+					<td><a href="http://news.ycombinator.com">HackerNews</a></td>
+					<td><a href="http://www.seas.upenn.edu/~cis194/spring13/index.html">CIS 194</a></td>
+					<td><a href="http://mail.office365.com">Mail</a></td>
+					<td><a href="http://gunshowcomic.com">Gunshow</td>
+				</tr>
+				<tr>
+					<td><a href="http://github.com">GitHub</a></td>
+					<td><a href="http://www.scs.stanford.edu/11au-cs240h/">CS 240h</a></td>
+					<td><a href="y3s2.htm">Timetable</a></td>
+					<td><a href="http://cucumber.gigidigi.com/cq/page-589/">Cucumber Quest</a></td>
+				</tr>
+			</table>
+			<br>
+		</center>
+		</p>
+	</div>
+</body>
+<script>
+function updateClock() 
+{
+	Date.getMinutesTwoDigits = function()
+	{
+		var retval = now.getMinutes();
+		if (retval < 10) return ("0" + retval.toString());
+		else return retval.toString();
+	}
+	Date.getHoursModTwelve = function()
+	{
+		var retval = now.getHours();
+		return retval;
+	}
+	var now = new Date(),
+	time = Date.getHoursModTwelve() + ':' + Date.getMinutesTwoDigits();
+	document.getElementById('time').innerHTML = ["", time].join('');
+	setTimeout(updateClock, 1000);
+}
+</script>	
+</html>
