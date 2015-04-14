@@ -19,7 +19,7 @@ alias usbmount='sudo mount -t vfat -o gid=users,fmask=113,dmask=002,exec /dev/sd
 alias df='df -h'
 alias du='du -h'
 alias free='free -h'
-alias ls='ls++'
+#alias ls='ls++'
 alias clojure='lein repl'
 alias lynx='lynx -vikeys'
 alias e='vim'

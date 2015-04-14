@@ -14,7 +14,7 @@ super + w
 super + t
 	bspc desktop -l next
 
-# Balances desktop so that all windows take up the same space
+# No idea
 super + b
 	bspc desktop -B
 
@@ -36,6 +36,10 @@ super + {o,i}
 	bspc window {older,newer} -f; \
 	bspc control --record-history on
 
+# No idea
+super + y
+	bspc window -w last.manual
+
 # Switch to the biggest window in desktop
 super + m
 	bspc window -s biggest
@@ -56,11 +60,11 @@ super + {comma,period}
 super + bracket{left,right}
 	bspc desktop -f {prev,next}
 
-# Preselect wondow for splitting
+# No idea
 super + ctrl + {h,j,k,l}
 	bspc window -p {left,down,up,right}
 
-# Cancel manual split on window/desktop level
+# No idea - does something funky with urxvt
 super + ctrl + {_,shift + }space
 	bspc {window -p cancel,desktop -c}
 
@@ -72,7 +76,7 @@ super + alt + {h,j,k,l}
 super + alt + shift + {h,j,k,l}
 	bspc window -e {right -10,up +10,down -10,left +10}
 
-# Set splitting ratio
+# No idea
 super + ctrl + {1-9}
 	bspc window -r 0.{1-9}
 
@@ -93,7 +97,7 @@ super + @button{1-3}
 	bspc pointer -u
 
 # Craig's playin'
-alt + tab
+alt + Tab
 	bspc window -f older
 
 #
@@ -136,12 +140,26 @@ super + Return
 super + space
 	dmenu_run
 
+# Weeb
 super + g
 	firefox
 
+super + shift + g
+	vimb
+
+# Pdf viewin'
 alt + z
 	zathura
 
+# Netflix
+super + n
+	google-chrome-stable --app=http://netflix.com
+
+# Conky
+alt + space
+	/home/craig/.scripts/conky
+
+# Lock
 super + shift + Escape
 	slimlock
 
