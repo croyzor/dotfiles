@@ -1,0 +1,24 @@
+sw_volume: 100
+audio_device_state:1:Muh speakers
+state: play
+current: 0
+time: 109.923000
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:the_front_bottoms/talon_of_the_hawk/03.Swear_To_God_The_Devil_Made_Me_Do_It.ogg
+1:the_front_bottoms/talon_of_the_hawk/04.Twin_Size_Mattress.ogg
+2:the_front_bottoms/talon_of_the_hawk/05.Peach.ogg
+3:the_front_bottoms/talon_of_the_hawk/06.Santa_Monica.ogg
+4:the_front_bottoms/talon_of_the_hawk/07.The_Feud.ogg
+5:the_front_bottoms/talon_of_the_hawk/08.Funny_You_Should_Ask.ogg
+6:the_front_bottoms/talon_of_the_hawk/09.Tattooed_Tears.ogg
+7:the_front_bottoms/talon_of_the_hawk/10.Lone_Star.ogg
+8:the_front_bottoms/talon_of_the_hawk/11.Back_Flip.ogg
+9:the_front_bottoms/talon_of_the_hawk/12.Everything_I_Own.ogg
+playlist_end

@@ -30,7 +30,7 @@ feh --bg-scale ~/Downloads/hollywoo.jpg
 
 sxhkd &
 #compton &
-#exec bspwm
+exec bspwm
 #exec cinnamon-session
-exec mate-session
+#exec mate-session
 #exec gnome-session
