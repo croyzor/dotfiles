@@ -3,97 +3,85 @@
 #
 
 # Quit bspwm (ain't never tried it)
-super + alt + Escape
-	bspc quit
+#super + alt + Escape
+#	bspc quit
 
 # Close selected window
-super + w
+alt + w
 	bspc window -c
 
 # No idea
 super + t
 	bspc desktop -l next
 
-# No idea
-super + b
-	bspc desktop -B
-
 # Make window float/fill screen
-super + {s,f}
+ctrl + alt + {s,f}
 	bspc window -t {floating,fullscreen}
 
 # Switch to previous window/desktop
-super + {grave,Tab}
+alt + {grave,Tab}
 	bspc {window,desktop} -f last
 
 # Swap this window with last one used
-super + apostrophe
+alt + apostrophe
 	bspc window -s last
 
 # No idea
-super + {o,i}
+alt + {o,i}
 	bspc control --record-history off; \
 	bspc window {older,newer} -f; \
 	bspc control --record-history on
 
 # No idea
-super + y
+alt + y
 	bspc window -w last.manual
 
 # Switch to the biggest window in desktop
-super + m
+alt + m
 	bspc window -s biggest
 
 # Focus/select window
-super + {_,shift + }{h,j,k,l}
+alt + {_,shift + }{h,j,k,l}
 	bspc window -{f,s} {left,down,up,right}
 
 # Focus previous window on desktop
-super + {_,shift + }c
+alt + {_,shift + }c
 	bspc window -f {next,prev}
 
 # Rotate windows backward/forward
-super + {comma,period}
+alt + {comma,period}
 	bspc desktop -C {backward,forward}
 
 # Switch to previous/next desktop
-super + bracket{left,right}
+alt + bracket{left,right}
 	bspc desktop -f {prev,next}
 
-# No idea
-super + ctrl + {h,j,k,l}
-	bspc window -p {left,down,up,right}
-
 # No idea - does something funky with urxvt
-super + ctrl + {_,shift + }space
+alt + ctrl + {_,shift + }space
 	bspc {window -p cancel,desktop -c}
 
 # Expand window
-super + alt + {h,j,k,l}
+ctrl + alt + {h,j,k,l}
 	bspc window -e {left -10,down +10,up -10,right +10}
 
 # Shrink window
-super + alt + shift + {h,j,k,l}
+ctrl + alt + shift + {h,j,k,l}
 	bspc window -e {right -10,up +10,down -10,left +10}
 
-# No idea
-super + ctrl + {1-9}
-	bspc window -r 0.{1-9}
-
 # Switch/move window to specific desktop
-super + {_,shift + }{1-9,0}
+alt + {_,shift + }{1-9,0}
 	bspc {desktop -f,window -d} ^{1-9,10}
 
 ~button1
 	bspc pointer -g focus
 
-super + button{1-3}
+alt + button{1-3}
 	bspc pointer -g {move,resize_side,resize_corner}
 
-super + !button{1-3}
+alt + !button{1-3}
 	bspc pointer -t %i %i
 
-super + @button{1-3}
+alt + @button{1-3}
 	bspc pointer -u
 
 # Craig's playin'
@@ -133,18 +121,18 @@ alt + Tab
 #
 
 # Spawn a terminal
-super + Return
+alt + Return
 	urxvt
 
 # Dmenu
-super + space
+alt + space
 	dmenu_run
 
 # Weeb
-super + g
+alt + g
 	firefox
 
-super + shift + g
+alt + shift + g
 	vimb
 
 # Pdf viewin'
@@ -152,7 +140,7 @@ alt + z
 	zathura
 
 # Netflix
-super + n
+alt + n
 	google-chrome-stable --app=http://netflix.com
 
 # Conky
@@ -160,9 +148,9 @@ alt + space
 	/home/craig/.scripts/conky
 
 # Lock
-super + shift + Escape
+alt + shift + Escape
 	slimlock
 
 # make sxhkd reload its configuration files:
-super + Escape
+alt + Escape
 	pkill -USR1 -x sxhkd
