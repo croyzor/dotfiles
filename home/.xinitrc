@@ -13,9 +13,6 @@ fi
 
 #~/.scripts/touchpad.sh
 
-# Swap super and ctrl
-xmodmap ~/.Xmodmap
-
 # Set the cursor
 xsetroot -cursor_name left_ptr
 
@@ -26,7 +23,10 @@ xrdb -merge .Xresources
 unclutter -grab -noevents -root &
 
 # Set the wallpaper
-feh --bg-scale ~/Downloads/hollywoo.jpg
+feh --bg-scale ~/Pictures/hollywoo.jpg
+
+# Swap super and ctrl
+xmodmap ~/.Xmodmap
 
 sxhkd &
 #compton &
