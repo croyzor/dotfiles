@@ -6,7 +6,8 @@ Clock() {
 }
 
 Battery() {
-	BATPERC=$(acpi --battery | cut -d, -f2)
+	#BATPERC=$(acpi --battery | cut -d, -f2)
+	BATPERC=$(~/.scripts/battery.sh)
 	echo "$BATPERC"
 }
 

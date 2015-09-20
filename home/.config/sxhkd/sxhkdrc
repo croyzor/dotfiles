@@ -121,7 +121,7 @@ alt + Tab
 #
 
 # Spawn a terminal
-alt + Return
+ctrl + alt + Return
 	urxvt
 
 # Dmenu
