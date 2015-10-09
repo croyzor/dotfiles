@@ -11,7 +11,11 @@ Battery() {
 	echo "$BATPERC"
 }
 
+Network() {
+	echo $(~/.scripts/net.sh)
+}
+
 while true; do
-	echo "%{c}%{Fwhite}%{Bblack} $(Clock)%{F-} %{r}$(Battery)"
+	echo "%{l}$(Network)%{c}%{Fwhite}%{Bblack} $(Clock)%{F-} %{r}$(Battery)"
 	sleep 1;
 done

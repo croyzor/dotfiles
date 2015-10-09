@@ -80,3 +80,10 @@ Sep 15 21:42 : player: played "the_front_bottoms/talon_of_the_hawk/10.Lone_Star.
 Sep 15 21:46 : player: played "the_front_bottoms/talon_of_the_hawk/11.Back_Flip.ogg"
 Sep 15 21:49 : player: played "the_front_bottoms/talon_of_the_hawk/12.Everything_I_Own.ogg"
 Sep 15 22:53 : client: [8] closed
+Oct 09 11:31 : client: [0] opened from [::1]:42203
+Oct 09 11:31 : avahi: Service 'Music Player' successfully established.
+Oct 09 11:31 : client: [0] closed
+Oct 09 11:32 : client: [1] opened from [::1]:42208
+Oct 09 11:33 : client: [1] closed
+Oct 09 11:33 : client: [2] opened from [::1]:42212
+Oct 09 11:33 : client: [2] closed

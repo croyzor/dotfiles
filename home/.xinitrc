@@ -26,9 +26,10 @@ unclutter -grab -noevents -root &
 feh --bg-scale ~/Pictures/hollywoo.jpg
 
 # Swap super and ctrl
-xmodmap ~/.Xmodmap
+xmodmap ~/.Xmodmap &
 
 sxhkd &
+~/.scripts/bar_run.sh &
 #compton &
 exec bspwm
 #exec cinnamon-session
