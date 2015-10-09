@@ -7,7 +7,7 @@
 #	bspc quit
 
 # Close selected window
-alt + shift + w
+alt + q
 	bspc window -c
 
 # No idea
