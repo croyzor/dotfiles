@@ -1,14 +1,13 @@
 #
 # bspwm hotkeys
 #
-
 # Quit bspwm (ain't never tried it)
 #super + alt + Escape
 #	bspc quit
 
 # Close selected window
 alt + q
-	bspc window -c
+	bspc node -c
 
 # No idea
 super + t
@@ -16,61 +15,65 @@ super + t
 
 # Make window float/fill screen
 ctrl + alt + {s,f}
-	bspc window -t {floating,fullscreen}
+	bspc node -t {floating,fullscreen}
 
 # Switch to previous window/desktop
 alt + {grave,Tab}
-	bspc {window,desktop} -f last
+	bspc {node,desktop} -f last
 
 # Swap this window with last one used
 alt + apostrophe
-	bspc window -s last
+	bspc node -s last
 
 # No idea
 alt + {o,i}
 	bspc control --record-history off; \
-	bspc window {older,newer} -f; \
+	bspc node {older,newer} -f; \
 	bspc control --record-history on
 
 # No idea
 alt + y
-	bspc window -w last.manual
+	bspc node -w last.manual
 
 # Switch to the biggest window in desktop
 alt + m
-	bspc window -s biggest
+	bspc node -s biggest
 
 # Focus/select window
 alt + {_,shift + }{h,j,k,l}
-	bspc window -{f,s} {left,down,up,right}
+	bspc node -{f,s} {west,south,north,east}
 
 # Focus previous window on desktop
 alt + {_,shift + }c
-	bspc window -f {next,prev}
+	bspc node -f {next,prev}
 
 # Rotate windows backward/forward
 alt + {comma,period}
 	bspc desktop -C {backward,forward}
 
 # Switch to previous/next desktop
-alt + bracket{left,right}
+alt + bracket{west,east}
 	bspc desktop -f {prev,next}
 
 # No idea - does something funky with urxvt
 alt + ctrl + {_,shift + }space
-	bspc {window -p cancel,desktop -c}
+	bspc {node -p cancel,desktop -c}
 
 # Expand window
 ctrl + alt + {h,j,k,l}
-	bspc window -e {left -10,down +10,up -10,right +10}
+	bspc node -e {west -10,south +10,north -10,east +10}
 
 # Shrink window
 ctrl + alt + shift + {h,j,k,l}
-	bspc window -e {right -10,up +10,down -10,left +10}
+	bspc node -e {east -10,north +10,south -10,west +10}
+
+# Cycle desktops
+alt + {bracketleft,bracketright}
+	bspc desktop -f {prev,next}
 
 # Switch/move window to specific desktop
 alt + {_,shift + }{1-9,0}
-	bspc {desktop -f,window -d} ^{1-9,10}
+	bspc {desktop -f,node -d} ^{1-9,10}
 
 ~button1
 	bspc pointer -g focus
@@ -93,10 +96,10 @@ alt + Tab
 #
 
 {@F1}
-	xte 'keydown Page_Up' 'keyup Page_Up'
+	bspc desktop -f prev
 
 {@F2}
-	xte 'keydown Page_Down' 'keyup Page_Down'
+	bspc desktop -f next
 
 {@F3}
 	xte 'keydown Control_L' 'key r' 'keyup Control_L'
