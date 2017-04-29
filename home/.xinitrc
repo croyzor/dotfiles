@@ -11,7 +11,11 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-#~/.scripts/touchpad.sh
+# Set uk keyboard for X apps
+setxkbmap -layout gb
+
+# Custom touchpad config using synaptic
+~/.scripts/synclient.sh
 
 # Set the cursor
 xsetroot -cursor_name left_ptr
@@ -23,13 +27,21 @@ xrdb -merge .Xresources
 unclutter -grab -noevents -root &
 
 # Set the wallpaper
-feh --bg-scale ~/Pictures/hollywoo.jpg
+feh --bg-scale ~/pics/sombra.jpg
 
 # Swap super and ctrl
 xmodmap ~/.Xmodmap &
 
 sxhkd &
+# Bar
 ~/.scripts/bar_run.sh &
+
+# Brightness
+xbacklight -set 15 &
+
+# Redshift
+#redshift -l 55.8642:-4.2518
+
 #compton &
 exec bspwm
 #exec cinnamon-session

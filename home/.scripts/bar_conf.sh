@@ -2,7 +2,7 @@
 
 Clock() {
 	DATE=$(date "+%a %b %d, %T")
-	echo -n "$DATE"
+	echo -n "%{F#FFF}$DATE"
 }
 
 Battery() {
@@ -15,7 +15,11 @@ Network() {
 	echo $(~/.scripts/net.sh)
 }
 
+Volume() {
+	echo $(~/.scripts/vol.sh)
+}
+
 while true; do
-	echo "%{l}$(Network)%{c}%{Fwhite}%{Bblack} $(Clock)%{F-} %{r}$(Battery)"
+	echo "%{l} $(Network)%{c} $(Clock) %{r}$(Volume) %{F#FFF}| $(Battery) "
 	sleep 1;
 done

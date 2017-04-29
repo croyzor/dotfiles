@@ -20,3 +20,8 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a Conky floating=on focus=off
 bspc rula -a spotify floating=on
+
+bspc config pointer_modifier control
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_corner
+bspc config click_to_focus

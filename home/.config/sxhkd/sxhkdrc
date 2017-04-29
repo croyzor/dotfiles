@@ -9,13 +9,9 @@
 alt + q
 	bspc node -c
 
-# No idea
-super + t
-	bspc desktop -l next
-
 # Make window float/fill screen
-ctrl + alt + {s,f}
-	bspc node -t {floating,fullscreen}
+ctrl + alt + {s,f,t}
+	bspc node -t {floating,fullscreen,tiled}
 
 # Switch to previous window/desktop
 alt + {grave,Tab}
@@ -24,20 +20,6 @@ alt + {grave,Tab}
 # Swap this window with last one used
 alt + apostrophe
 	bspc node -s last
-
-# No idea
-alt + {o,i}
-	bspc control --record-history off; \
-	bspc node {older,newer} -f; \
-	bspc control --record-history on
-
-# No idea
-alt + y
-	bspc node -w last.manual
-
-# Switch to the biggest window in desktop
-alt + m
-	bspc node -s biggest
 
 # Focus/select window
 alt + {_,shift + }{h,j,k,l}
@@ -49,43 +31,39 @@ alt + {_,shift + }c
 
 # Rotate windows backward/forward
 alt + {comma,period}
-	bspc desktop -C {backward,forward}
+	bspc node -C {backward,forward}
 
 # Switch to previous/next desktop
-alt + bracket{west,east}
+alt + bracket{left,right}
 	bspc desktop -f {prev,next}
-
-# No idea - does something funky with urxvt
-alt + ctrl + {_,shift + }space
-	bspc {node -p cancel,desktop -c}
 
 # Expand window
 ctrl + alt + {h,j,k,l}
-	bspc node -e {west -10,south +10,north -10,east +10}
+	bspc node -z {left -10 0,bottom 0 10,top 0 -10,right 10 0}
 
 # Shrink window
-ctrl + alt + shift + {h,j,k,l}
-	bspc node -e {east -10,north +10,south -10,west +10}
+ctrl + alt + shift + {l,k,j,h}
+	bspc node -z {left 10 0,bottom 0 -10,top 0 10,right -10 0}
 
 # Cycle desktops
-alt + {bracketleft,bracketright}
+alt + bracket{left,right}
 	bspc desktop -f {prev,next}
 
 # Switch/move window to specific desktop
 alt + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} ^{1-9,10}
 
-~button1
-	bspc pointer -g focus
-
-alt + button{1-3}
-	bspc pointer -g {move,resize_side,resize_corner}
-
-alt + !button{1-3}
-	bspc pointer -t %i %i
-
-alt + @button{1-3}
-	bspc pointer -u
+#button1
+#	bspc node pointed -f
+#
+#alt + button{1-3}
+#	bspc pointer -g {move,resize_side,resize_corner}
+#
+#alt + !button{1-3}
+#	bspc pointer -t %i %i
+#
+#alt + @button{1-3}
+#	bspc pointer -u
 
 # Craig's playin'
 alt + Tab
@@ -111,13 +89,16 @@ alt + Tab
 	bspc desktop -f next
 
 {@F6,@F7}
-	xbacklight -{dec,inc} 10
+	xbacklight -{dec,inc} 5
 
 {@F8}
 	amixer set Master toggle
 
 {@F9,@F10}
 	amixer set Master 5{-,+} unmute
+
+#shift + @F6
+#	xte 'key F6'
 
 #
 # wm independent hotkeys
@@ -137,6 +118,10 @@ alt + g
 
 alt + shift + g
 	vimb
+
+# Emacs client
+alt + e
+	emacsclient -c
 
 # Pdf viewin'
 alt + z
